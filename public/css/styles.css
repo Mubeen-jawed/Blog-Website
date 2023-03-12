@@ -23,6 +23,7 @@ p {
 
 .footer-padding {
     padding-top: 20px;
+    display: none;
 }
 
 .footer {
