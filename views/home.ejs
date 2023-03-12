@@ -1,0 +1,24 @@
+<%- include('partials/header') -%>
+
+<div class=" container">
+  <h1>Home</h1>
+  <p><%= blogContent %></p>
+</div>
+
+
+
+
+<% for (let i = 0; i < postsArray.length; i++) { %>
+
+  <div class="container">
+    <h1><%= postsArray[i].title %></h1> 
+    <p><%= postsArray[i].content.substring(0, 100) + "..." %>  <a href="/posts/<%= postsArray[i]._id  %> ">Read More</a></p> <!--- Ejs is not working in href tag properly. Thats why Anchor tag is not working correctly. instead of "postsArray[i].titleText" there should be "topic" but it is putting "Undefined topic". uppecase and space titles are not working  -->
+  </div>
+
+
+<% } %>
+
+
+<%- include('partials/footer') -%> 
+
+
